@@ -1,0 +1,138 @@
+body {
+	margin-top: 3vw;
+	width: 100vw;
+	background: url('../images/black_scales.png');
+}
+#mytitle {
+	color: #e67300;
+	font-size: 5vw;
+	font-family: 'Rammetto One', cursive;
+	font-weight: 800;
+	-webkit-text-stroke: 0.2vw #000000;
+	text-shadow:
+    	3px 3px 0 #000,
+    	-1px -1px 0 #000,  
+    	1px -1px 0 #000,
+    	-1px 1px 0 #000,
+    	1px 1px 0 #000;
+}
+
+#myburger {
+	font-size: 2.5vw;
+	font-family: 'Open Sans', sans-serif;
+	width: 40vw;
+	background: #ffe6cc;
+	outline: none;
+	border-color: #994d00;
+	border-width: 0.6vw;
+	border-radius: 1.5vw;
+	font-weight: 800;
+	cursor: cell;
+}
+#directions {
+	font-size: 2.5vw;
+	font-family: 'Open Sans', sans-serif;
+	color: #ffa64d;
+	-webkit-text-stroke: 0.1vw #808080;
+	text-shadow:
+    	3px 3px 0 #000,
+    	-1px -1px 0 #000,  
+    	1px -1px 0 #000,
+    	-1px 1px 0 #000,
+    	1px 1px 0 #000;
+}
+.makeburger {
+	background: #ffb366;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 5vw;
+}
+#eaten {
+	margin: 0.5vw 0vw 1vw 10vw;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5vw;
+	background: #ffe6cc;
+	width: 30vw;
+	border-radius: 1.8vw;
+}
+#makeburger:focus {
+	outline: none;
+}
+.section {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5vw;
+	color: #ffa64d;
+	-webkit-text-stroke: 0.1vw #808080;
+	text-shadow:
+    	3px 3px 0 #000,
+    	-1px -1px 0 #000,  
+    	1px -1px 0 #000,
+    	-1px 1px 0 #000,
+    	1px 1px 0 #000;
+}
+#makeburger:hover {
+	background: #ffffb3;
+}
+#makeburger:active {
+	background: #ff8000;
+}
+#burger {
+	margin: 0.5vw 0vw 1vw 10vw;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5vw;
+	background: #ffe6cc;
+	width: 30vw;
+	border-radius: 1.8vw;
+
+}
+.area {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5vw;
+	background: #ffe6cc;
+	width: 30vw;
+	border-radius: 1.8vw;
+}
+#tx1 {
+	height: 8vw;
+	outline:none;
+	border: none;
+}
+
+a, #myfooter {
+	margin-top: 25vw;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3.0vw;
+	font-weight: 400;
+	color: #e67300;
+	font-weight: 800;
+	text-decoration: none;
+	-webkit-text-stroke: 0.2vw #000000;
+	}
+a:hover {
+	text-decoration: none;
+	color: #003366;
+}
+a:visited {
+	color: #3399ff;
+	text-decoration: none;
+}
+a:focus{
+	color: #0073e6;
+	outline: none;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+}
