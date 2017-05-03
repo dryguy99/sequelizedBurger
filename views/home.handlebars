@@ -13,16 +13,16 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-6 text-center">
-				<form method="POST" action="/" class="button-size"> 
+			{{!-- <div class="col-xs-6 col-sm-6 col-md-6 text-center">
+				<form method="POST" action="/api/creators" class="button-size"> 
 					<input type="text" id="myname" name="patron_name">
 					<p id="directions">Type in a Burger You Would Like to Eat!</p>
 					<button id="makeburger" class="btn btn-lg makeburger">Create A Burger</button>
 				</form>
-			</div>
+			</div> --}}
 		
 			<div class="col-xs-6 col-sm-6 col-md-6 text-center">
-				<form method="POST" action="/" class="button-size"> 
+				<form method="POST" action="/api/burgers" class="button-size"> 
 					<input type="text" id="myburger" name="burger_name">
 					<p id="directions">Type in a Burger You Would Like to Eat!</p>
 					<button id="makeburger" class="btn btn-lg makeburger">Create A Burger</button>
@@ -37,12 +37,12 @@
 						  {{#each burgers}}
 						   
 						      <div id="burger" class="text-center">
-						      	<form action="/{{this.id}}?_method=PUT" method="POST">
+						      	<form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
 		
 						        	{{this.id}}.<textarea id="tx1" class="area text-center" type="text" name="burger_name">{{this.burger_name}}</textarea><br>
 						        	<button type="submit" class="btn btn-md makeburger btnburger">UPDATE Burger!</button>
 								</form>
-						        <form action="/{{this.id}}?_method=PUT" method="POST">
+						        <form action="/api/burgers/{{this.id}}?_method=PUT" method="POST">
 						          <input type="hidden" name="devoured" value="true">
 						          <button type="submit" class="btn btn-md makeburger btnburger">DEVOUR Burger!</button>
 						        </form>
@@ -59,7 +59,7 @@
 						      
 						        {{this.id}}. {{this.burger_name}}<br>
 
-						        <form action="/{{this.id}}?_method=DELETE" method="POST">
+						        <form action="/api/burgers/{{this.id}}?_method=DELETE" method="POST">
 						          <input type="hidden" name="id" value="{{this.id}}">
 						          <button type="submit" class="btn btn-lg makeburger">DELETE Burger!</button>
 						        </form>

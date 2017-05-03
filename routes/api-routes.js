@@ -12,7 +12,7 @@ var db = require('../models');
 module.exports = function(app) {
 
   // GET route for getting all of the burgers
-  app.get("/api", function(req, res) {
+  app.get("/api/burgers", function(req, res) {
     console.log("3 : select all")
    db.Burgers.findAll({})
         .then(function(result) {
@@ -24,7 +24,7 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new burger.
-  app.post("/api/burgers", function(req, res) {
+  app.post("/api/burgers/", function(req, res) {
 
     var burger = req.body.burger_name;
     var devoured = false;
@@ -34,7 +34,7 @@ module.exports = function(app) {
       devoured: devoured,
     }).then( function(dbBurgers) {
       
-      res.redirect("/api");
+      res.redirect("/api/");
     });
   });
 
@@ -47,7 +47,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then( function (burger) {
-      res.redirect("/api");
+      res.redirect("/api/");
     });
     
   });
@@ -64,7 +64,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then( function (burger) {
-      res.redirect("/api");
+      res.redirect("/api/");
     });
     
   });
