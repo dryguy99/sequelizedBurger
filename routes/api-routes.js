@@ -12,13 +12,20 @@ var db = require('../models');
 module.exports = function(app) {
 
   // GET route for getting all of the burgers
-  app.get("/api/burgers", function(req, res) {
+  app.get("/api/burgers", function(req, res, err) {
+    if (err) {
+      console.log("Error: " + err);
+    }
     console.log("3 : select all")
    db.Burgers.findAll({})
-        .then(function(result) {
+        .then(function(result, error) {
+          if (error) {
+            console.log(error);
+          } else {
           let tmp = result.map((data) => data.dataValues).filter((data) => !data.devoured);
           let tmp2 = result.map((data) => data.dataValues).filter((data) => data.devoured);
           res.render("home", { burgers: tmp, eaten : tmp2 });
+        }
         });
    
   });

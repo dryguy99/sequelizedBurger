@@ -29,6 +29,12 @@ body {
 	font-weight: 800;
 	cursor: cell;
 }
+#start {
+	display: none;
+}
+#setname {
+	display: none;
+}
 #directions {
 	font-size: 2.5vw;
 	font-family: 'Open Sans', sans-serif;
